@@ -6,6 +6,7 @@ import Clock from "./Clock.jsx";
 import Events from "./Events.jsx";
 import Forms from "./Forms.jsx";
 import Todo from "./Todo.jsx";
+import Effect from "./Effect.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -14,5 +15,6 @@ createRoot(document.getElementById("root")).render(
     <Events />
     <Forms />
     <Todo />
+    <Effect />
   </StrictMode>
 );

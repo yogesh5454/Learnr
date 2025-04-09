@@ -1,0 +1,26 @@
+.button {
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+li {
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
