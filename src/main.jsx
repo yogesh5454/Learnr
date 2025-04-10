@@ -7,6 +7,8 @@ import Events from "./Events.jsx";
 import Forms from "./Forms.jsx";
 import Todo from "./Todo.jsx";
 import Effect from "./Effect.jsx";
+import Fetchapi from "./Fetchapi.jsx";
+import Simproject from "./simproject.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,5 +18,8 @@ createRoot(document.getElementById("root")).render(
     <Forms />
     <Todo />
     <Effect />
+    <br />
+    <Fetchapi />
+    <Simproject />
   </StrictMode>
 );
