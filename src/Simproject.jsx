@@ -1,7 +1,14 @@
 import Accordion from "./simprojects/Accordion/Accordion";
-
-function simproject() {
-  return <Accordion />;
+import Randomcolor from "./simprojects/Randomcolor/Randomcolor";
+import Starrating from "./simprojects/Starrating/starrating";
+function Simproject() {
+  return (
+    <>
+      <Accordion />
+      <Randomcolor />
+      <Starrating />
+    </>
+  );
 }
 
-export default simproject;
+export default Simproject;
