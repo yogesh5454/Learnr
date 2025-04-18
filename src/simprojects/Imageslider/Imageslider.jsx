@@ -21,6 +21,13 @@ const ImageSlider = ({ url, page = 1, limit = 5 }) => {
       setloading(false);
     }
   }
+
+  function handleprevious() {
+    setcurrentslide(currentslide === 0 ? image.length - 1 : currentslide - 1);
+  }
+  function handlenext() {
+    setcurrentslide(currentslide === image.length ? 0 : currentslide + 1);
+  }
   useEffect(() => {
     if (url !== "") fetchimages(url);
   }, [url]);
@@ -37,23 +44,41 @@ const ImageSlider = ({ url, page = 1, limit = 5 }) => {
     <>
       <style>{}</style>
       <div className="container ">
-        <BsArrowLeftCircleFill className="arrow arrow-left" />
+        <BsArrowLeftCircleFill
+          onClick={handleprevious}
+          className="arrow arrow-left"
+        />
         {image && image.length
-          ? image.map((imageitem) => (
+          ? image.map((imageitem, index) => (
               <img
                 key={imageitem.id}
                 alt={imageitem.download_url}
                 src={imageitem.download_url}
-                className="current-image"
+                className={
+                  currentslide === index
+                    ? "current-image"
+                    : "current-image hide-current-image"
+                }
               />
             ))
           : null}
 
-        <BsArrowRightCircleFill className="arrow arrow-right" />
+        <BsArrowRightCircleFill
+          onClick={handlenext}
+          className="arrow arrow-right"
+        />
         <span className="circle-indicators">
           {image && image.length
             ? image.map((_, index) => (
-                <button key={index} className="current-indicator"></button>
+                <button
+                  key={index}
+                  className={
+                    currentslide === index
+                      ? "current-indicator"
+                      : "current-indicator inactive-indicator"
+                  }
+                  onClick={() => setcurrentslide(index)}
+                ></button>
               ))
             : null}
         </span>

@@ -2,6 +2,8 @@ import Accordion from "./simprojects/Accordion/Accordion";
 import Randomcolor from "./simprojects/Randomcolor/Randomcolor";
 import Starrating from "./simprojects/Starrating/starrating";
 import ImageSlider from "./simprojects/Imageslider/Imageslider";
+import Lodeproducts from "./simprojects/Lodemoreproducts/Lodeproducts";
+import Treeview from "./simprojects/Treeview/Treeview";
 function Simproject() {
   return (
     <>
@@ -13,6 +15,8 @@ function Simproject() {
         page={"1"}
         limit={"10"}
       />
+      <Lodeproducts />
+      <Treeview />
     </>
   );
 }
