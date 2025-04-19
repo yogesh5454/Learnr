@@ -4,6 +4,9 @@ import Starrating from "./simprojects/Starrating/starrating";
 import ImageSlider from "./simprojects/Imageslider/Imageslider";
 import Lodeproducts from "./simprojects/Lodemoreproducts/Lodeproducts";
 import Treeview from "./simprojects/Treeview/Treeview";
+import menus from "./simprojects/Treeview/data";
+import QRCode from "react-qr-code";
+import Qrcode from "./simprojects/Qrcode/Qrcode";
 function Simproject() {
   return (
     <>
@@ -16,7 +19,8 @@ function Simproject() {
         limit={"10"}
       />
       <Lodeproducts />
-      <Treeview />
+      <Treeview menus={menus}/>
+      <Qrcode/>
     </>
   );
 }
